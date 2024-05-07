@@ -1,4 +1,4 @@
-package practice.springboot.cards.entity;
+package practice.springboot.loans.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,25 +9,21 @@ import lombok.*;
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @ToString
-public class Cards extends BaseEntity {
+public class Loans extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long cardId;
-
+    private Long loanId;
     private String mobileNumber;
+    private String loanNumber;
+    private String loanType;
+    private int totalLoan;
+    private int amountPaid;
+    private int outstandingAmount;
 
-    private String cardNumber;
 
-    private String cardType;
-
-    private int totalLimit;
-
-    private int amountUsed;
-
-    private int availableAmount;
 
 }
